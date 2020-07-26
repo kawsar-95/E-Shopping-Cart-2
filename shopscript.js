@@ -19,6 +19,18 @@ function handleProductChange(product, isIncrease) {
   }
 
   document.getElementById(product + "-total").innerText = productTotal;
+  calculateTotal();
+}
+
+function calculateTotal() {
+  const phoneInput = document.getElementById("phone-count");
+  const phoneCount = parseInt(phoneInput.value);
+
+  const caseInput = document.getElementById("case-count");
+  const caseCount = parseInt(caseInput.value);
+
+  const totalPrice = phoneCount * 1219 + caseCount * 59;
+  document.getElementById("total-price").innerText = totalPrice;
 }
 
 // Case Button
